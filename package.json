@@ -1,26 +1,27 @@
 {
   "name": "n01",
   "version": "1.0.0",
-  "description": "",
+  "description": "a node project",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "nodemon app",
     "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ofu997/n01.git"
   },
-  "author": "",
+  "author": "oliver fu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ofu997/n01/issues"
   },
   "homepage": "https://github.com/ofu997/n01#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.4"
   }
 }
