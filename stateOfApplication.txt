@@ -1,2 +1,3 @@
 - Uses SQL statements (select all products, select product by id, and insert into product table).
 - Connects to MySQL
+- Integrates Mongoose
