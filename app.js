@@ -14,6 +14,7 @@ app.set('views', 'views');
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+const authRoutes = require('./routes/auth');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -29,6 +30,7 @@ app.use((req, res, next) => {
 
 app.use('/admin', adminRoutes); 
 app.use(shopRoutes);
+app.use(authRoutes);
 
 app.use(errorController.get404);
 
@@ -55,3 +57,9 @@ mongoose
 .catch(err => {
   console.log(err); 
 });
+
+// Note: The URL /book/create will be matched by a route like 
+// /book/:bookId (which will extract a "bookId" value of 'create'). 
+// The first route that matches an incoming URL will be used, so 
+// if you want to process /book/create URLs separately, their 
+// route handler must be defined before your /book/:bookId route.
